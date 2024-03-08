@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width-device-width, initial-scale-1.0">
+    <title>
+        {% block title%}
+        {% endblock%}
+    </title>
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+    <link href="{% static 'css/all.css' %}" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script defer src="app.js"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <script src="{% static 'js/bootstrap.bundle.js' %}"></script>
+<style>
+    img,.me{
+    height:70%; width:40%;
+    min-height:100px;background-size:cover;
+    background-attachment:fixed;
+    border:1px solid black; border-radius:10px 0px 10px 0px;
+    }
+    a{
+    text-decoration:none;}
+    .sicon{
+    margin-top:5%;
+    font-size:38px;
+    }
+    ufooter,.bfooter{
+    width:1500px;
+    }
+    .header,.title{
+    width:1480px;
+    }
+
+    .mid{
+    min-height:100px;
+    width:1480px;margin-left:-3%;
+    background-size:cover;
+    background-attachment:fixed;
+    border-radius:0px;
+    }
+    .s1{
+    min-height:100px;
+    width:1490px;
+    background-size:cover;
+    }
+    .Simg{
+    height:450px;
+    width:1490px;
+    background-size:cover;
+    background-attachment:fixed;
+    border-radius:0px;
+    animation-name:slider;
+    background:rgba(0,0,0,.2);
+    animation-duration:6s;
+    animation-iteration-count:infinite;
+    }
+    .Simg:hover{
+    animation-play-state:paused;
+    }
+    .slider{
+    background:rgba(0,0,0,.5);
+    }
+
+
+</style>
+</head>
+<body>
+<!-- header section-->
+<div class="container-fluid row header py-3 header" style="background:#00264d;">
+    <div class="col-sm-2 fs-3">
+        <b><font face="Arial Black" color="white" ><i>SUMIT <br>YAGIK</i></font></b>
+    </div>
+
+    <div class="col-sm-3  fs-2">
+
+        <font color="#8000ff" face="Berlin Sans FB" size="4px"><p>Aspiring Web Developer. <br> Intern at o(1)Codingclub</p></font>
+    </div>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-2"><font color="white" face="Berlin Sans FB"><p></p></font></div>
+    <div class="col-sm-4">
+        <font color="white" class="icon">
+        <a  href="https://www.facebook.com/profile.php?id=61552141231299" target="_blank"><b class="text-light fs-5 d"><i class="fa-brands fa-facebook sicon"></i></b></a>&ensp;&ensp;
+        <a  href="https://www.instagram.com/yagik_sumit_001/" target="_blank"><b class="text-light fs-5 d"><i class="fa-brands fa-instagram sicon"></i></b></a>&ensp;&ensp;
+        <a  href="https://www.linkedin.com/in/sumit-yagik-26b588259/" target="_parent"><b class="text-light fs-1 d"><i class="fa-brands fa-linkedin"></i></b></a>&nbsp;&nbsp;
+        <a  href="https://github.com/Sumityagik" target="_blank"><b class="text-light fs-5 d"><i class="fa-brands fa-github sicon"></i></b></a>&ensp;&ensp;
+       </font>
+    </div>
+</div>
+<!-- header ends-->
+<!-- title-->
+<div class=" container-fluid row header py-2 sticky-top bg-dark title">
+    <div class="col-sm-4 logo fs-3 py-2 text-center">
+        <a href="#" rel="nofollow"><b class="text-white" style="margin-top:10%; font-family:calligraphy;">MY </b><b class="text-center" style="color:#8000ff;"><br>PORTFOLIO</b></a>
+    </div>
+    <div class="col-sm-1 logo fs-3 py-2 text-center"></div>
+     <div class="col-sm-7 logo fs-5 py-2 text-center">
+         <!--start menu-->
+         <nav class="navbar navbar-expand-lg bg-dark text-white">
+  <div class="container-fluid">
+
+    <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon " style=" onmousehover:"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-white">
+        <li class="nav-item">
+          <a class="nav-link active text-white" aria-current="page" href="main"><i class="fa-solid fa-house"></i>Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="resume"><i class="fa-solid fa-user"></i>Resume</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link text-white" href="projects"><i class="fa-solid fa-laptop"></i>Projects</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link text-white" href="contact"><i class="fa-solid fa-phone fa-spin"></i>&ensp;Contact me</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link  text-white" href="/admin/">
+              <i class="fa-solid fa-key"></i>Login</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn bg-mycolor" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </form>
+    </div>
+  </div>
+</nav>
+         <!--end menu-->
+     </div>
+</div>
+<!-- title ends-->
+<!-- body-->
+{% block x%}
+
+{%endblock%}
+<!-- body ends-->
+
+<!--footer-->
+<div class=" container-fluid row ufooter" style="width:102%;">
+    <div class="col-sm-1 ps-2 py-2 bg-dark"></div>
+        <div class="col-sm-3 ps-2 py-2 bg-dark">
+            <h3><i class="text-white gn fw-bolder">MY<b class="gn text-mycolor fw-bolder"> PORTFOLIO</b></i></h3>
+            <b class="text-white fs-4"  style="font-family:calligraphy;">{{my_name}}</b>
+            <h5 class="text-light " style="font-family:calligraphy;">Aspiring Web Developer.<br>Intern at o Codingclub</h5><br>
+
+             <a href="https:\\www.facebook.com/profile.php?id=61552141231299" target="_blank"> <b class="text-light fs-3 d"><i class="fa-brands fa-facebook-f"></i></b></a>
+               <a href="https:\\mobile.twitter.com" target="_blank"> <b class="text-light fs-3 d"><i class="fa-brands fa-twitter"></i></b></a>
+            <a href="https:\\in.pinterest.com" target="_blank">  <b class="text-light fs-3 d"><i class="fa-brands fa-pinterest"></i></b></a>
+               <a href="https:\\www.google.co.in" target="_blank"> <b class="text-light fs-3 d"><i class="fa-brands fa-google-plus-g"></i></b></a>
+              <a href="https:\\www.instagram.com/yagik_sumit_001/" target="_blank"><b class="text-light fs-3 d"><i class="fa-brands fa-instagram"></i></b></a>
+        </div>
+        <div class="col-sm-4 ps-2 py-2 bg-dark">
+                <b class="fw-bolder text-light fs-3 text-center">ABOUT ME</b><br>
+            <p class="text-light fs-6">My name is Sumit Yagik. I am a quick learner, Hardworking and
+believe in team work .</p>
+             <a href="user/news.html/" class="text-white" >Qualification</a>
+             <ul class="text-white" style="text-decoration:none;">
+             <li>Diploma in CSE</li>
+             <li>Graduated in BA</li>
+             <li>Intermediate</li>
+             </ul>
+            <a href="user/news.html/" class="text-white" >Training</a>
+            <ul class="text-white" style="text-decoration:none;">
+             <li>Summer Training in 2020</li>
+             <li>DSA Training in 2023</li>
+             <li>Data analytics by cisco</li>
+            </ul>
+
+        </div>
+        <div class="col-sm-4 py-2 bg-dark">
+            <b class="fw-bolder text-light fs-3 text-center"></b><br>
+            <a href="user/news.html/" class="text-white" >Projects</a>
+         <ul class="text-white" style="text-decoration:none;">
+             <li>India Times 24/7 (website)</li>
+             <li>Quiz game</li>
+             <li>Flipkart Sales Dashboard</li>
+             <li>Walmart Sales Dashboard</li>
+             <li>self Portfolio website</li>
+             </ul>
+            <a href="user/news.html/" class="text-white" >Interest</a>
+               <ul class="text-white" style="text-decoration:none;">
+             <li>Web developing </li>
+             <li>Data analysis</li>
+             <li>Power BI Dashboard</li>
+
+             </ul>
+               <a href="user/news.html" class="text-white" ></a>
+
+
+        </div>
+    </div>
+    <div class="container-fluid row bfooter " style="background:#00264d;">
+        <div class="col-sm-6"><i class="text-white">Developed By :</i> <a href="user/about.html/" class="text-white"><b style="color:#8000ff;">SUMIT YAGIK</b></a></div>
+
+        <div class="col-sm-6"  style="background:#00264d;">
+            <i class="text-white">&copy; Copyright : <a href="https://www.o1codingclub.in" target="_blank" class="text-white"> <b style="color:#8000ff;">oCodingclub</b></a></i>
+        </div>
+    </div>
+
+<!--footer ends-->
+</body>
+</html>
