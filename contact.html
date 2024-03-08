@@ -1,0 +1,77 @@
+{% extends 'Task.html' %}
+{% load static %}
+{% block title%}
+contact
+{% endblock%}
+{% block x%}
+<div class="container-fluid " style="min-height:500px;background:#00264d;">
+    <div class="fs-2 text-center" ><b class="text-white">CONTACT </b><b class="text-mycolor" style="color:#8000ff;">ME
+<i class="fa-solid fa-location-dot"></i></b>
+</div>
+<div class="row">
+    <div class="col-sm-1"></div>
+
+    <div class="col-sm-5 frm">
+        {% if msg %}
+        <div class="alert alert-success">
+            Your data saved Succesfully.....
+        </div>
+        {% endif %}
+        <form method="post" style="margin-top:10%;">
+            {% csrf_token %}
+            <div class="input-group mb-3">
+                <i class="input-group-text bg-mycolor text-white">
+                    <i class="fa-solid fa-user"></i>
+                </i>
+                <input name="name" required type="text" class="form-control" placeholder="Name.">
+            </div>
+
+            <div class="input-group mb-3">
+                <i class="input-group-text bg-mycolor text-light">
+                    <i class="fa-solid fa-envelope"></i>
+                </i>
+                <input name="email" required type="text" class="form-control" placeholder="Email.">
+            </div>
+
+            <div class="input-group mb-3">
+                <i class="input-group-text bg-mycolor text-light">
+                    <i class="fa-solid fa-phone"></i>
+                </i>
+                <input name="mob" required type="text" class="form-control" placeholder="Mobile.">
+            </div>
+
+            <div class="input-group mb-3">
+                <i class="input-group-text bg-mycolor text-light">
+                    <i class="fa-solid fa-message"></i>
+                </i>
+                <textarea name="msg" required class="form-control" placeholder="Message"></textarea>
+            </div>
+            <input type="submit" value="Save" class="form-control bg-mycolor mb-3">
+
+        </form>
+
+<!--        <div class="alert alert-success">-->
+<!--            Name Is :{{Name}}<br>-->
+<!--            Email Is :{{Email}}<br>-->
+<!--            Mobile Is :{{Mobile}}<br>-->
+<!--            Message Is :{{Message}}<br>-->
+<!--        </div>-->
+
+    </div>
+
+    <div class="col-sm-5">
+        <img src="{% static 'images/work5.png'%}" style="min-height:400px; width:100%; border:0px; margin:0px;"/>
+    </div>
+<div class="col-sm-1"></div>
+</div>
+<hr/>
+
+<div class="row mt-5">
+<div class="col-sm-2"></div>
+<div class="col-sm-8">
+
+</div>
+<div class="col-sm-2"></div>
+</div>
+</div>
+{%endblock%}
